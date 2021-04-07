@@ -8,10 +8,16 @@ Array.prototype.sum = function () {
   //def & set beginning total
   let total = 0;
   //loop thru i of this array
+  //happens on the instance of the array ("this" array when created)
   for (const i of this) {
     //every loop adds the value
     //of i to the total
     total += i;
+    //
+    //alt loop:
+    //for(let i = 0; i < this.length; i++){
+    // total += this[i]
+    // }
   }
   return total;
 };
@@ -28,6 +34,9 @@ Array.prototype.average = function () {
   return total / this.length;
 };
 
-// const arr = [-12, 7, 10, 5, 9];
-// console.log("🍎", arr.sum());
-// console.log("🍌", arr.average());
+const arr1 = [-12, 7, 10, 5, 9];
+const arr2 = [88, 27, 91, 0];
+// console.log("🍎", arr1.sum());
+// console.log("🍌", arr1.average());
+// console.log("🍎", arr2.sum());
+// console.log("🍌", arr2.average());
